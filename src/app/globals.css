@@ -7,7 +7,6 @@
   --primary: oklch(0.3656 0.1105 267.46);
   --secondary: oklch(0.6565 0.1517 157.89);
   --accent: oklch(1 0 0);
-  --blueTemu: oklch(0.3656 0.1105 267.46);
   --radius: 0.625rem;
   --background: oklch(1 0 0);
   --foreground: oklch(0.145 0 0);
@@ -81,30 +80,6 @@
 
 body {
   font-family: var(--font-plus-jakarta-sans);
-}
-
-.text-primary {
-  color: var(--primary);
-}
-
-.text-secondary {
-  color: var(--secondary);
-}
-
-.bg-primary {
-  background-color: var(--primary);
-}
-
-.bg-secondary {
-  background-color: var(--secondary);
-}
-
-.border-primary {
-  border-color: var(--primary);
-}
-
-.border-secondary {
-  border-color: var(--secondary);
 }
 
 .dark {
