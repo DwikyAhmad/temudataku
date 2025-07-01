@@ -121,7 +121,12 @@ export default function Home() {
                             transition={{ delay: 0.6, duration: 0.6 }}
                             className="flex flex-col sm:flex-row gap-4 justify-center items-center"
                         >
-                            <Button className="bg-secondary text-white py-4 px-8 rounded-full font-semibold text-lg hover:bg-secondary/90 transition-all flex items-center gap-2 group h-auto shadow-lg hover:shadow-xl">
+                            <Button
+                                onClick={() =>
+                                    (window.location.href = "/dashboard")
+                                }
+                                className="bg-secondary text-white py-4 px-8 rounded-full font-semibold text-lg hover:bg-secondary/90 transition-all flex items-center gap-2 group h-auto shadow-lg hover:shadow-xl"
+                            >
                                 <div className="flex items-center gap-2">
                                     Mulai Perjalanan Anda
                                     <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
@@ -131,9 +136,11 @@ export default function Home() {
                                 variant="outline"
                                 className="border-2 border-primary text-primary px-8 py-4 rounded-full font-semibold text-lg hover:bg-primary hover:text-white transition-all h-auto bg-transparent"
                                 onClick={() => {
-                                    document.getElementById('features')?.scrollIntoView({
-                                        behavior: 'smooth'
-                                    });
+                                    document
+                                        .getElementById("features")
+                                        ?.scrollIntoView({
+                                            behavior: "smooth",
+                                        });
                                 }}
                             >
                                 Pelajari Lebih Lanjut
@@ -387,6 +394,9 @@ export default function Home() {
 
                             <Button
                                 variant="outline"
+                                onClick={() =>
+                                    (window.location.href = "/dashboard")
+                                }
                                 className="w-full rounded-xl border-2 border-orange-500 text-orange-500 hover:bg-orange-500 hover:text-white h-12 font-semibold transition-all duration-300"
                             >
                                 Choose Plan
@@ -466,12 +476,16 @@ export default function Home() {
                                 </li>
                             </ul>
 
-                            <Button className="w-full bg-secondary hover:bg-secondary/90 rounded-xl h-12 font-semibold transition-all duration-300">
+                            <Button
+                                onClick={() =>
+                                    (window.location.href = "/dashboard")
+                                }
+                                className="w-full bg-secondary hover:bg-secondary/90 rounded-xl h-12 font-semibold transition-all duration-300"
+                            >
                                 Choose Plan
                             </Button>
                         </motion.div>
                     </motion.div>
-
                 </div>
             </section>
 
@@ -497,7 +511,10 @@ export default function Home() {
                         transition={{ delay: 0.4, duration: 0.6 }}
                         className="flex flex-col sm:flex-row gap-4 justify-center items-center"
                     >
-                        <Button className="bg-secondary text-white px-8 py-4 rounded-full font-semibold text-lg hover:bg-secondary/90 transition-all flex items-center gap-2 group h-auto shadow-lg hover:shadow-xl">
+                        <Button
+                            onClick={() => (window.location.href = "/dashboard")}
+                            className="bg-secondary text-white px-8 py-4 rounded-full font-semibold text-lg hover:bg-secondary/90 transition-all flex items-center gap-2 group h-auto shadow-lg hover:shadow-xl"
+                        >
                             <div className="flex items-center gap-2">
                                 Daftar Sekarang
                                 <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
@@ -505,6 +522,7 @@ export default function Home() {
                         </Button>
                         <Button
                             variant="outline"
+                            onClick={() => (window.location.href = "/login")}
                             className="border-2 border-white text-white px-8 py-4 rounded-full font-semibold text-lg hover:bg-white hover:text-primary transition-all h-auto bg-transparent"
                         >
                             Masuk ke Akun

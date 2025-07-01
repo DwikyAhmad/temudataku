@@ -37,9 +37,12 @@ export default function Navbar() {
                         >
                             Mentoring
                         </a>
-                        <button className="bg-secondary text-white px-6 py-2 rounded-full font-semibold hover:bg-opacity-90 transition-all">
+                        <Link
+                            href="/dashboard"
+                            className="bg-secondary hover:bg-secondary/90 text-white px-6 py-2 rounded-full font-semibold hover:bg-opacity-90 transition-all"
+                        >
                             Mulai Belajar
-                        </button>
+                        </Link>
                     </div>
                 </div>
             </div>
