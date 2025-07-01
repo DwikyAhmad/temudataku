@@ -4,6 +4,16 @@ import { motion } from "framer-motion";
 import Link from "next/link";
 
 export default function Navbar() {
+    const scrollToSection = (sectionId: string) => {
+        const element = document.getElementById(sectionId);
+        if (element) {
+            element.scrollIntoView({
+                behavior: 'smooth',
+                block: 'start',
+            });
+        }
+    };
+
     return (
         <motion.nav
             initial={{ opacity: 0, y: -20 }}
@@ -19,24 +29,24 @@ export default function Navbar() {
                         </Link>
                     </div>
                     <div className="hidden md:flex items-center space-x-8">
-                        <a
-                            href="#features"
-                            className="text-gray-600 hover:text-primary transition-colors"
+                        <button
+                            onClick={() => scrollToSection('features')}
+                            className="text-gray-600 hover:text-primary transition-colors cursor-pointer"
                         >
                             Our Features
-                        </a>
-                        <a
-                            href="#practice"
-                            className="text-gray-600 hover:text-primary transition-colors"
+                        </button>
+                        <button
+                            onClick={() => scrollToSection('practice')}
+                            className="text-gray-600 hover:text-primary transition-colors cursor-pointer"
                         >
                             Practice
-                        </a>
-                        <a
-                            href="#mentoring"
-                            className="text-gray-600 hover:text-primary transition-colors"
+                        </button>
+                        <button
+                            onClick={() => scrollToSection('mentoring')}
+                            className="text-gray-600 hover:text-primary transition-colors cursor-pointer"
                         >
                             Mentoring
-                        </a>
+                        </button>
                         <Link
                             href="/dashboard"
                             className="bg-secondary hover:bg-secondary/90 text-white px-6 py-2 rounded-full font-semibold hover:bg-opacity-90 transition-all"

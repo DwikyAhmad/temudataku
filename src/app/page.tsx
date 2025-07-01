@@ -21,6 +21,16 @@ import { Button } from "@/components/ui/button";
 import Navbar from "@/components/NavbarComp";
 
 export default function Home() {
+    const scrollToSection = (sectionId: string) => {
+        const element = document.getElementById(sectionId);
+        if (element) {
+            element.scrollIntoView({
+                behavior: 'smooth',
+                block: 'start',
+            });
+        }
+    };
+
     const fadeInUp = {
         initial: { opacity: 0, y: 60 },
         animate: { opacity: 1, y: 0 },
@@ -549,20 +559,20 @@ export default function Home() {
                             <h4 className="font-semibold mb-4">Layanan</h4>
                             <ul className="space-y-2 text-gray-400">
                                 <li>
-                                    <a
-                                        href="#"
-                                        className="hover:text-secondary transition-colors"
+                                    <button
+                                        onClick={() => scrollToSection('mentoring')}
+                                        className="hover:text-secondary transition-colors cursor-pointer"
                                     >
                                         Mentoring
-                                    </a>
+                                    </button>
                                 </li>
                                 <li>
-                                    <a
-                                        href="#"
-                                        className="hover:text-secondary transition-colors"
+                                    <button
+                                        onClick={() => scrollToSection('practice')}
+                                        className="hover:text-secondary transition-colors cursor-pointer"
                                     >
                                         Practice
-                                    </a>
+                                    </button>
                                 </li>
                                 <li>
                                     <a
